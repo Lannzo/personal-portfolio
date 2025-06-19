@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --primary-color: #e83e8c; 
   --secondary-color: #6f42c1; 
@@ -218,4 +219,226 @@ html {
   margin: 0 auto 1rem auto;
   color: #666;
   font-size: 1rem;
+=======
+:root {
+  --primary-color: #e83e8c; 
+  --secondary-color: #6f42c1; 
+  --text-color: #343a40;
+  --light-text-color: #6c757d;
+  --background-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --border-color: #e9ecef;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; 
+  line-height: 1.7;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 1280px; 
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* --- NAVBAR STYLES --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  color: var(--secondary-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary-color);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+
+.projects-title {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+}
+
+.project-header {
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.project-content {
+    padding: 1rem;
+}
+
+.project-description {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-tag {
+    background-color: #ff1493;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-github {
+    background-color: #333;
+    color: white;
+}
+
+.btn-github:hover {
+    background-color: #444;
+}
+
+.btn-demo {
+    background-color: #ff1493;
+    color: white;
+}
+
+.btn-demo:hover {
+    background-color: #ff69b4;
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
+    animation-delay: calc(var(--delay) * 0.1s);
+}
+
+.projects-description {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 1rem auto;
+  color: #666;
+  font-size: 1rem;
+>>>>>>> 20dd046d832328522cd879b85ae405512c745cf1
 }

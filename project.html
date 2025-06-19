@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,4 +91,98 @@
   document.addEventListener('DOMContentLoaded', renderProjects);
 </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/project.css">
+</head>
+<body>
+  <div class="wrapper">
+      <nav class="navbar">
+        <div class="logo">MLS</div>
+        <div class="nav-links">
+          <a href="Portfolio.html">Home</a>
+          <a href="education.html">Education</a>
+          <a href="project.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+
+      <h1 class="projects-title">Projects</h1>
+      <p class="projects-description">Here are some of the projects I've worked on. Click on the GitHub link to view.</p>
+  
+    <div id="projects-grid" class="projects-grid">
+        <!-- Projects will be added here-->
+    </div>
+  </div>
+
+
+
+<script>
+  const projectsData = [
+      {
+          title: "Easekolar",
+          description: "A Database Project in Information Management: Development of a Scholarship Application System Implementing Create, Read, Update, and Delete (CRUD) Operations.",
+          technologies: ["HTML", "CSS", "JavaScript", "MySQL"],
+          githubLink: "https://github.com/Lannzo/Easekolar",
+          imageUrl: "static/img/easekolar.png" 
+      },
+      {
+          title: "TechMatch",
+          description: "Application Development Project Utilizing Spring Boot: TechMatch, an Event Management Platform.",
+          technologies: ["HTML", "CSS", "JavaScript", "Java Springboot"],
+          githubLink: "https://github.com/Lannzo/sample",
+          imageUrl: "static/img/Login Page.png"
+      },
+      {
+          title: "Coin Dash",
+          description: "Coin Dash is a fast-paced, arcade-style game where players race against time to collect as many coins as possible while avoiding mischievous monsters.",
+          technologies: ["Java"],
+          githubLink: "https://github.com/Lannzo/byow",
+          imageUrl: "static/img/coin.png"
+      }
+
+  ];
+
+  // Function to create project cards
+  function renderProjects() {
+      const projectsGrid = document.getElementById('projects-grid');
+      
+      projectsData.forEach(function(project) {
+          const projectCard = document.createElement('div');
+          projectCard.classList.add('project-card');
+
+          const technologiesHtml = project.technologies.map(function(tech) {
+              return '<span class="tech-tag">' + tech + '</span>';
+          }).join('');
+
+          projectCard.innerHTML = `
+              <img src="${project.imageUrl}" alt="${project.title} Project Screenshot" class="project-image">
+              <div class="project-header">
+                  <h2 class="project-title">${project.title}</h2>
+              </div>
+              <div class="project-content">
+                  <p class="project-description">${project.description}</p>
+                  <div class="tech-tags">
+                      ${technologiesHtml}
+                  </div>
+                  <div class="project-links">
+                      <a href="${project.githubLink}" target="_blank" class="btn btn-github">GitHub</a>
+                  </div>
+              </div>
+          `;
+
+          projectsGrid.appendChild(projectCard);
+      });
+  }
+
+  document.addEventListener('DOMContentLoaded', renderProjects);
+</script>
+</body>
+>>>>>>> 20dd046d832328522cd879b85ae405512c745cf1
 </html>
